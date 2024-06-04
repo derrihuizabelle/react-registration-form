@@ -14,7 +14,7 @@ function SwitchInput({ value, label, eventHandler }: SwitchInputProps) {
           role="switch"
           id="flexSwitchCheckDefault"
           defaultChecked={value}
-          onChange={eventHandler}
+          onClick={eventHandler}
         />
         {label && (
           <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
