@@ -1,6 +1,6 @@
 interface SwitchInputProps {
   value: boolean;
-  label: string;
+  label?: string;
   eventHandler: (v: any) => void;
 }
 
