@@ -1,0 +1,36 @@
+$color-background-light: white;
+$color-foreground-light: black;
+
+$color-background-dark: red;
+$color-foreground-dark: #efefef;
+
+body,
+#root {
+  background-color: $color-background-light;
+  color: $color-foreground-light;
+
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+body.dark,
+body.dark #root {
+  background-color: $color-background-dark;
+  color: $color-foreground-dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  body,
+  #root {
+    background-color: $color-background-dark;
+    color: $color-foreground-dark;
+  }
+}

@@ -1,20 +1,16 @@
-import { useGlobalContext } from '../../contexts/GlobalContext.js';
-import SwitchInput from '../common/switchInput/SwitchInput.js';
-import Form from '../form/Form.js';
+import SwitchInput from '../common/switchInput/SwitchInput';
+import Form from '../form/Form';
 import './App.scss';
+import useThemeMediaQuery from '../../hooks/useThemeMediaQuery';
 
 function App() {
-
-  const {theme, toggleTheme} = useGlobalContext();
+  const { theme, toggleTheme } = useThemeMediaQuery();
+  console.log('theme', theme);
   return (
     <>
       <div className="container-fluid home">
         <header className="container-fluid header">
-          <SwitchInput
-            eventHandler={toggleTheme}
-            value={true}
-            label={''}
-          />
+          <SwitchInput eventHandler={toggleTheme} value={true} label={''} />
           <p>{theme}</p>
         </header>
 
