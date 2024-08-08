@@ -1,14 +1,29 @@
+$color-background-light: white;
+$color-foreground-light: black;
+
+$color-background-dark: red;
+$color-foreground-dark: #efefef;
+
 .home {
-    width: 100%;
-    height: 100%; 
+  width: 100%;
+  height: 100%;
+
+  background-color: $color-background-light;
+  color: $color-foreground-light;
 }
 
 .home-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    > form {
-        max-width: 50%;
-        padding: 2rem;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > form {
+    max-width: 50%;
+    padding: 2rem;
+  }
+}
+
+body.dark .home {
+  background-color: $color-background-dark;
+  color: $color-foreground-dark;
 }
