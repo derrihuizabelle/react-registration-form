@@ -1,10 +1,16 @@
 interface CheckboxProps {
   value: boolean;
   label: string;
-  eventHandler: (v: any) => void;
+  onCheck: (v: any) => void;
 }
 
-function Checkbox({ value, label, eventHandler }: CheckboxProps) {
+function Checkbox({ value, label, onCheck }: CheckboxProps) {
+  const componentId =  Math.floor(Math.random() * 100) + 1;
+  const handleCheck = (event: any) => {
+    const inputValue = event.target.checked;
+    onCheck(inputValue);
+  };
+
   return (
     <>
       <div className="form-check">
@@ -12,10 +18,10 @@ function Checkbox({ value, label, eventHandler }: CheckboxProps) {
           className="form-check-input"
           type="checkbox"
           defaultChecked={value}
-          id="flexCheckDefault"
-          onClick={eventHandler}
+          id={`basic-checkbox-${componentId}`}
+          onClick={handleCheck}
         />
-        <label className="form-check-label" htmlFor="flexCheckDefault">
+        <label className="form-check-label" htmlFor={`basic-checkbox-${componentId}`}>
           {label}
         </label>
       </div>

@@ -20,6 +20,10 @@ $color-foreground-dark: #efefef;
   > form {
     max-width: 50%;
     padding: 2rem;
+
+    > .form-check {
+      padding-bottom: 10px;
+    }
   }
 }
 

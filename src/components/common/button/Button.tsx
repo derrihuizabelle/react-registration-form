@@ -1,13 +1,13 @@
 interface ButtonProps {
   value: string;
   style?: string;
-  eventHandler: (v: any) => void;
+  onClick: (v: any) => void;
 }
 
-function Button({ value, style = 'btn-primary', eventHandler }: ButtonProps) {
+function Button({ value, style = 'btn-primary', onClick }: ButtonProps) {
   return (
     <>
-      <button type="button" className={`btn ${style}`} onClick={eventHandler}>
+      <button type="button" className={`btn ${style}`} onClick={onClick}>
         {value}
       </button>
     </>

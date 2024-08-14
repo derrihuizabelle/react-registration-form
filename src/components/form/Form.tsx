@@ -1,43 +1,56 @@
-import Button from '../common/button/Button.js';
-import Checkbox from '../common/checkbox/Checkbox.js';
-import InputText from '../common/inputText/InputText.js';
+import { useState } from 'react';
+import Button from '../common/button/Button';
+import Checkbox from '../common/checkbox/Checkbox';
+import InputText from '../common/inputText/InputText';
+import useForm from '../../hooks/useForm';
 
 function Form() {
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [terms, setTerms] = useState(null);
+
+  const { submitForm } = useForm();
+
   return (
     <>
       <form>
         <InputText
-          value={''}
+          value={username}
+          label={'Username'}
           placeholder={''}
-          eventHandler={(v) => {
-            console.log('oi', v);
+          onChange={(v) => {
+            setUsername(v);
           }}
         />
         <InputText
           value={''}
+          label={'Email'}
           placeholder={''}
-          eventHandler={() => {
-            console.log('oi');
+          onChange={(v) => {
+            setEmail(v);
           }}
         />
         <InputText
           value={''}
+          label={'Password'}
           placeholder={''}
-          eventHandler={() => {
-            console.log('oi');
-          }}
-        />
-        <Button
-          value={'Submit'}
-          eventHandler={() => {
-            console.log('oi');
+          type='password'
+          onChange={(v) => {
+            setPassword(v);
           }}
         />
         <Checkbox
           value={false}
-          label={''}
-          eventHandler={(e) => {
-            console.log('e', e);
+          label={'Aceita os termos'}
+          onCheck={(e) => {
+            setTerms(e);
+          }}
+        />
+        <Button
+          value={'Submit'}
+          onClick={() => {
+            submitForm({username, email, password, terms});
           }}
         />
       </form>

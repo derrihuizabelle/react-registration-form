@@ -5,7 +5,6 @@ import useThemeMediaQuery from '../../hooks/useThemeMediaQuery';
 
 function App() {
   const { theme, toggleTheme } = useThemeMediaQuery();
-  console.log('theme', theme);
   return (
     <>
       <div className="container-fluid home">
