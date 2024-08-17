@@ -15,7 +15,6 @@ function App() {
         </header>
         <div className="home-container__content">
           <div className='home-container__banner'>
-            <p> oi</p>
             {/* <img src='src\assets\whales.jpg' alt="Description of the image" /> */}
           </div>
           <div className='home-container__form'>

@@ -21,7 +21,7 @@ function Login() {
           <InputText
             value={username}
             label={'Username'}
-            placeholder={''}
+            placeholder={'Enter your username'}
             onChange={(v) => {
               setUsername(v);
             }}
@@ -29,8 +29,8 @@ function Login() {
           <InputText
             value={''}
             label={'Password'}
-            placeholder={''}
-            type='password'
+            placeholder={'Enter your password'}
+            type='Password'
             onChange={(v) => {
               setPassword(v);
             }}
@@ -40,13 +40,13 @@ function Login() {
         <div className='options-group'>
           <Checkbox
             value={false}
-            label={'remember me'}
+            label={'Remember me'}
             onCheck={(e) => {
               console.log("i remember")
             }}
           />
 
-          <p>Forgot password?</p>
+          <p>Forgot password</p>
         </div>
 
         <div className='button-group'>
