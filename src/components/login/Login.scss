@@ -1,0 +1,77 @@
+form, .input-group, .button-group {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    background-color: red;
+    padding: 1rem;
+    width: 70%;
+
+    h1 {
+        font-size: 2rem;
+        font-weight: 500; 
+        align-self: center;
+     }
+     
+     h2 {
+         font-size: 1.5rem;
+         font-weight: 400;
+         color: grey;
+         align-self: center;
+     }
+
+     .input-group {
+        margin-top: 2rem;
+     }
+    
+     .input-group > .form-group > label {
+        font-size: 1rem;
+        font-weight: 300;
+        color: grey;
+    }
+    
+    .button-group > button {
+        margin-bottom: 0.5rem;
+    }
+    
+    .button-group > .button-divider {
+        font-weight: 300;
+        display: flex;
+        flex-direction: row;
+        > p {
+            width: 50%;
+            border-bottom: 1px solid gray;
+            align-self: center;
+        }
+    
+        > span {
+            margin: 16px;
+        }
+    }
+    
+    .button-sso-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+        > button {
+            width: 48%;
+        }
+    }
+    
+    .register-redirection {
+        margin-top: 2rem;
+        align-self: center;
+        font-weight: 300;
+        span {
+            font-weight: bold;
+        }
+    }
+}
+
+
+
+
+
+

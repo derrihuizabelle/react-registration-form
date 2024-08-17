@@ -1,0 +1,95 @@
+/* Reset básico */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Resetando estilos de elementos básicos */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, blockquote, hr, pre, a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+/* Resetando listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Resetando links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Resetando imagens e vídeos */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Resetando tabelas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Resetando botões */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Resetando formulários */
+input, textarea {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Resetando estilos HTML5 */
+article, aside, details, figcaption, figure, footer, header, main, nav, section {
+  display: block;
+}
+
+/* Box-sizing para toda a página */
+html {
+  box-sizing: border-box;
+}
+
+/* Removendo o estilo padrão de foco */
+:focus {
+  outline: none;
+}
+
+/* Reset de margens automáticas para formulários e botões */
+form, button {
+  margin: 0;
+}
+
+/* Resetando estilos de seleções */
+::selection {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Resetando espaçamento entre inline-blocks */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* Resolvendo diferença de fontes entre navegadores */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}

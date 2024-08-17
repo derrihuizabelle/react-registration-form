@@ -1,21 +1,30 @@
 import SwitchInput from '../common/switchInput/SwitchInput';
-import Form from '../form/Form';
+// import SignIn from '../signIn/SignIn';
 import './App.scss';
 import useThemeMediaQuery from '../../hooks/useThemeMediaQuery';
+import Login from '../login/Login';
 
 function App() {
   const { theme, toggleTheme } = useThemeMediaQuery();
   return (
     <>
-      <div className="container-fluid home">
-        <header className="container-fluid header">
+      <div className="home-container">
+        <header className="home-container__header">
           <SwitchInput eventHandler={toggleTheme} value={true} label={''} />
           <p>{theme}</p>
         </header>
-
-        <div className="home-form">
-          <Form />
+        <div className="home-container__content">
+          <div className='home-container__banner'>
+            <p> oi</p>
+            {/* <img src='src\assets\whales.jpg' alt="Description of the image" /> */}
+          </div>
+          <div className='home-container__form'>
+            <Login />
+          </div>
         </div>
+        <footer className="home-container__footer">
+          some info
+        </footer>
       </div>
     </>
   );
