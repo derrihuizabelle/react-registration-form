@@ -15,8 +15,13 @@ $color-foreground-dark: #efefef;
   color: $color-foreground-light;
 }
 
-.home-container__header, .home-container__footer {
+.home-container__header {
   background-color: #3365A6;
+  display: flex;
+  justify-content: flex-end;
+  > .form-switch {
+    padding: 1rem;
+  }
 }
 
 .home-container__content {
@@ -41,10 +46,6 @@ $color-foreground-dark: #efefef;
     margin-right: 10%;
     margin-bottom: 5%;
   }
-}
-
-.home-container__footer {
-  width: 100%;
 }
 
 

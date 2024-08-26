@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import Button from '../common/button/Button';
-import Checkbox from '../common/checkbox/Checkbox';
-import InputText from '../common/inputText/InputText';
-import useForm from '../../hooks/useForm';
+import Button from '../../common/button/Button';
+import Checkbox from '../../common/checkbox/Checkbox';
+import InputText from '../../common/inputText/InputText';
+import useForm from '../../../hooks/useForm';
 
-function SignIn() {
+function SignIn({ onHandleFormType }) {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -13,6 +13,7 @@ function SignIn() {
   const { submitForm } = useForm();
 
   return (
+
     <>
       <form>
         <h2>Create an Account</h2>
@@ -59,9 +60,9 @@ function SignIn() {
         <Button
           value={'Login'}
           style={'btn-outline-info'}
-          onClick={() => {
-            submitForm({username, email, password, terms});
-          }}
+          onClick={
+            onHandleFormType
+          }
           
         />
       </form>

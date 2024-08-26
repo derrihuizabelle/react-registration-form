@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import Button from '../common/button/Button';
-import InputText from '../common/inputText/InputText';
-import useForm from '../../hooks/useForm';
+import Button from '../../common/button/Button';
+import InputText from '../../common/inputText/InputText';
+import useForm from '../../../hooks/useForm';
 import './Login.scss';
-import Checkbox from '../common/checkbox/Checkbox';
+import Checkbox from '../../common/checkbox/Checkbox';
 
-function Login() {
+function Login({ onHandleFormType }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -77,13 +77,11 @@ function Login() {
                 submitForm({username, password});
               }}
             />
-          </div>
-
-          
+          </div>          
         </div>
 
         <div className='register-redirection'>
-          <p>Don't have an account? <span>Register</span></p>
+          <p>Don't have an account? <span onClick={onHandleFormType}>Register</span></p>
         </div>
       </form>
     </>

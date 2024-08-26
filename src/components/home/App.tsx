@@ -2,10 +2,15 @@ import SwitchInput from '../common/switchInput/SwitchInput';
 // import SignIn from '../signIn/SignIn';
 import './App.scss';
 import useThemeMediaQuery from '../../hooks/useThemeMediaQuery';
-import Login from '../login/Login';
+import Login from '../authentication/login/Login';
+import { useState } from 'react';
+import SignIn from '../authentication/signIn/SignIn';
+import Authentication from '../authentication/Authentication';
 
 function App() {
   const { theme, toggleTheme } = useThemeMediaQuery();
+  const [isRegister, setIsRegister] = useState(false);
+
   return (
     <>
       <div className="home-container">
@@ -18,12 +23,9 @@ function App() {
             {/* <img src='src\assets\whales.jpg' alt="Description of the image" /> */}
           </div>
           <div className='home-container__form'>
-            <Login />
+            <Authentication />
           </div>
         </div>
-        <footer className="home-container__footer">
-          some info
-        </footer>
       </div>
     </>
   );
